@@ -3,7 +3,7 @@
 Libs/TempTestCase*
 Libs/TempTestSuite*
 bin/lib/TempTestCase*
-Reports/
+/Reports/
 Prueba*.*
 prueba*.*
 \.classpath

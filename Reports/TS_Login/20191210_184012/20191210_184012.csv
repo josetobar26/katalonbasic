@@ -1,9 +1,0 @@
-Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
-TS_Login,Chrome 78.0.3904.108,,,2019-12-10 18:40:57,2019-12-10 18:41:17,"19,431s",INCOMPLETE
-,,,,,,,
-Test Cases/TC_Login,Chrome 78.0.3904.108,,,2019-12-10 18:40:57,2019-12-10 18:41:17,"19,220s",FAILED
-"openBrowser(""http://testeresiigojs.azurewebsites.net/#/license"")",Chrome 78.0.3904.108,,,2019-12-10 18:40:58,2019-12-10 18:41:15,"17,128s",PASSED
-"setText(findTestObject(""Login/inputUserName""), findTestData(""Login/DD_Login"").getValue(2, 1))",Chrome 78.0.3904.108,,,2019-12-10 18:41:15,2019-12-10 18:41:16,"0,983s",PASSED
-"setText(findTestObject(""Login/inputPassword""), findTestData(""Login/DD_Login"").getValue(3, 1))",Chrome 78.0.3904.108,,,2019-12-10 18:41:16,2019-12-10 18:41:16,"0,226s",PASSED
-"click(findTestObject(""Login/buttonLogin""))",Chrome 78.0.3904.108,,,2019-12-10 18:41:16,2019-12-10 18:41:16,"0,145s",PASSED
-"waitForElementPresent(findTestObject(""PT/HomePage/ImgLogo""), 5)",Chrome 78.0.3904.108,,,2019-12-10 18:41:16,2019-12-10 18:41:17,"0,493s",FAILED

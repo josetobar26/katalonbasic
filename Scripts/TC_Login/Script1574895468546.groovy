@@ -15,9 +15,9 @@ import internal.GlobalVariable as GlobalVariable
 
 WebUI.openBrowser('http://testeresiigojs.azurewebsites.net/#/license')
 
-WebUI.setText(findTestObject('Login/inputUserName'), findTestData('Login/DD_Login').getValue(2, 1))
+WebUI.setText(findTestObject('Login/inputUserName'), 'siigo@tech.com')
 
-WebUI.setText(findTestObject('Login/inputPassword'), findTestData('Login/DD_Login').getValue(3, 1))
+WebUI.setText(findTestObject('Login/inputPassword'), '1111')
 
 WebUI.click(findTestObject('Login/buttonLogin'))
 
