@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC_LogOff</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>6f243921-2ac6-4082-9d76-f308d4d96124</testCaseGuid>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>63e7b2fd-b165-4667-9396-b981a908b557</id>
+      <masked>false</masked>
+      <name>userName</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>46192b5c-4f38-4ea6-bc96-59893a899346</id>
+      <masked>false</masked>
+      <name>password</name>
+   </variable>
+</TestCaseEntity>

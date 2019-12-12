@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestSuiteEntity>
+   <description></description>
+   <name>TS_LogOff</name>
+   <tag></tag>
+   <isRerun>false</isRerun>
+   <mailRecipient></mailRecipient>
+   <numberOfRerun>0</numberOfRerun>
+   <pageLoadTimeout>30</pageLoadTimeout>
+   <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
+   <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
+   <testSuiteGuid>50d3190d-65fb-41b5-8f2c-71667d43c39a</testSuiteGuid>
+   <testCaseLink>
+      <guid>a1d45913-b224-4c11-80a0-d7d4639dc2e8</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/TC_LogOff</testCaseId>
+      <testDataLink>
+         <combinationType>ONE</combinationType>
+         <id>fa5a5e9f-5d90-41c8-86cb-3b8c1e9c761e</id>
+         <iterationEntity>
+            <iterationType>ALL</iterationType>
+            <value></value>
+         </iterationEntity>
+         <testDataId>Data Files/Login/DD_Login</testDataId>
+      </testDataLink>
+      <testDataLink>
+         <combinationType>ONE</combinationType>
+         <id>9658642f-aba3-4dfb-8872-aafcfb2af633</id>
+         <iterationEntity>
+            <iterationType>ALL</iterationType>
+            <value></value>
+         </iterationEntity>
+         <testDataId>Data Files/Login/DD_LogOff</testDataId>
+      </testDataLink>
+      <variableLink>
+         <testDataLinkId>fa5a5e9f-5d90-41c8-86cb-3b8c1e9c761e</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>XLS_Usuario</value>
+         <variableId>63e7b2fd-b165-4667-9396-b981a908b557</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>9658642f-aba3-4dfb-8872-aafcfb2af633</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>XLS_Password</value>
+         <variableId>46192b5c-4f38-4ea6-bc96-59893a899346</variableId>
+      </variableLink>
+   </testCaseLink>
+</TestSuiteEntity>

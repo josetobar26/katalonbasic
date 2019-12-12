@@ -1,0 +1,18 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+TS_LogOff,Chrome 79.0.3945.79,,,2019-12-12 17:54:55,2019-12-12 17:55:45,"50,345s",INCOMPLETE
+,,,,,,,
+Test Cases/TC_LogOff,Chrome 79.0.3945.79,,,2019-12-12 17:54:55,2019-12-12 17:55:22,"26,526s",PASSED
+Start listener action : sampleBeforeTestCase,Chrome 79.0.3945.79,,,2019-12-12 17:54:55,2019-12-12 17:55:19,"23,488s",PASSED
+"setText(findTestObject(""Login/inputUserName""), userName)",Chrome 79.0.3945.79,,,2019-12-12 17:55:19,2019-12-12 17:55:19,"0,223s",PASSED
+"setText(findTestObject(""Login/inputPassword""), password)",Chrome 79.0.3945.79,,,2019-12-12 17:55:19,2019-12-12 17:55:19,"0,157s",PASSED
+"click(findTestObject(""Login/buttonLogin""))",Chrome 79.0.3945.79,,,2019-12-12 17:55:19,2019-12-12 17:55:19,"0,128s",PASSED
+"verifyElementPresent(findTestObject(""Login/alert""), 5, STOP_ON_FAILURE)",Chrome 79.0.3945.79,,,2019-12-12 17:55:19,2019-12-12 17:55:21,"1,605s",PASSED
+Start listener action : sampleAfterTestCase,Chrome 79.0.3945.79,,,2019-12-12 17:55:21,2019-12-12 17:55:22,"0,656s",PASSED
+,,,,,,,
+Test Cases/TC_LogOff,Chrome 79.0.3945.79,,,2019-12-12 17:55:22,2019-12-12 17:55:45,"23,621s",PASSED
+Start listener action : sampleBeforeTestCase,Chrome 79.0.3945.79,,,2019-12-12 17:55:22,2019-12-12 17:55:43,"21,087s",PASSED
+"setText(findTestObject(""Login/inputUserName""), userName)",Chrome 79.0.3945.79,,,2019-12-12 17:55:43,2019-12-12 17:55:43,"0,283s",PASSED
+"setText(findTestObject(""Login/inputPassword""), password)",Chrome 79.0.3945.79,,,2019-12-12 17:55:43,2019-12-12 17:55:43,"0,217s",PASSED
+"click(findTestObject(""Login/buttonLogin""))",Chrome 79.0.3945.79,,,2019-12-12 17:55:43,2019-12-12 17:55:44,"0,216s",PASSED
+"verifyElementPresent(findTestObject(""Login/alert""), 5, STOP_ON_FAILURE)",Chrome 79.0.3945.79,,,2019-12-12 17:55:44,2019-12-12 17:55:45,"1,081s",PASSED
+Start listener action : sampleAfterTestCase,Chrome 79.0.3945.79,,,2019-12-12 17:55:45,2019-12-12 17:55:45,"0,729s",PASSED
