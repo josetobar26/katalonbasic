@@ -13,8 +13,8 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-//WebUI.openBrowser(GlobalVariable.URL)
-//WebUI.maximizeWindow()
+WebUI.openBrowser(GlobalVariable.URL)
+WebUI.maximizeWindow()
 
 WebUI.setText(findTestObject('Login/inputUserName'), userName)
 
@@ -24,4 +24,4 @@ WebUI.click(findTestObject('Login/buttonLogin'))
 
 WebUI.verifyElementPresent(findTestObject('Login/alert'), 5, FailureHandling.STOP_ON_FAILURE)
 
-//WebUI.closeBrowser()
+WebUI.closeBrowser()

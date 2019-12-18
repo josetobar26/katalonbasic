@@ -26,8 +26,8 @@ class SetUp {
 
 	@BeforeTestCase
 	def sampleBeforeTestCase(TestCaseContext testCaseContext) {
-		WebUI.openBrowser(GlobalVariable.URL)
-		WebUI.maximizeWindow()
+		//WebUI.openBrowser(GlobalVariable.URL)
+		//WebUI.maximizeWindow()
 	}
 
 	/**
@@ -36,7 +36,7 @@ class SetUp {
 	 */
 	@AfterTestCase
 	def sampleAfterTestCase(TestCaseContext testCaseContext) {
-		WebUI.closeBrowser()
+		//WebUI.closeBrowser()
 	}
 
 }
