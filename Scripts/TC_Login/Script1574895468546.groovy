@@ -15,6 +15,8 @@ import internal.GlobalVariable as GlobalVariable
 
 WebUI.openBrowser(findTestData('Login/DD_Login').getValue(1, 1))
 
+WebUI.maximizeWindow()
+
 WebUI.setText(findTestObject('Login/inputUserName'), findTestData('Login/DD_Login').getValue(2, 1))
 
 WebUI.setText(findTestObject('Login/inputPassword'), findTestData('Login/DD_Login').getValue(3, 1))
@@ -23,11 +25,11 @@ WebUI.click(findTestObject('Login/buttonLogin'))
 
 WebUI.waitForElementPresent(findTestObject('HomePage/ImgLogo'), 5)
 
-WebUI.click(findTestObject('HomePage/spanList'))
+//WebUI.click(findTestObject('HomePage/spanList'))
 
-WebUI.click(findTestObject('HomePage/a_Cerrar Sesin'))
+//WebUI.click(findTestObject('HomePage/a_Cerrar Sesin'))
 
-WebUI.verifyElementPresent(findTestObject('Login/inputUserName'), 5)
+//WebUI.verifyElementPresent(findTestObject('Login/inputUserName'), 5)
 
-WebUI.closeBrowser()
+//WebUI.closeBrowser()
 
