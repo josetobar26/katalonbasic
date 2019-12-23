@@ -87,5 +87,4 @@ Thread.sleep(1000)
 
 WebUI.verifyElementPresent(findTestObject('Digital Certificate/Attach Documentation/btnSendDocumentation'), 0)
 
-WebUI.closeBrowser()
-
+CustomKeywords.'utilities.CommonUtilities.endScenario'()

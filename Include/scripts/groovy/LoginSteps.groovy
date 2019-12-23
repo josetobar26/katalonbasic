@@ -24,6 +24,8 @@ import WSBuiltInKeywords as WS
 import WebUiBuiltInKeywords as WebUI
 
 import org.openqa.selenium.WebElement
+import pages.HomePage
+import pages.LoginPage
 import org.openqa.selenium.WebDriver
 import org.openqa.selenium.By
 
@@ -47,39 +49,40 @@ import cucumber.api.java.en.When
 
 
 class LoginSteps {
+	
+	private TestData xlsLogin = findTestData('Login/DD_Login')
+	private TestData xlsLogOff = findTestData('Login/DD_LogOff')
+	
+	LoginPage loginPage = new LoginPage()
+	HomePage homePage = new HomePage()
 
 	@Given("El usuario navega a la pagina de login")
 	def navigateToLoginPage(){
-		WebUI.openBrowser(GlobalVariable.URL)
+		loginPage.navigateToLoginPage()
 	}
-	
+
 	@When("El usuario ingresa las credenciales correctas")
 	def enterCorrectCredentials(){
-		WebUI.setText(findTestObject('Login/inputUserName'), findTestData('Login/DD_Login').getValue(2, 1))
-		WebUI.setText(findTestObject('Login/inputPassword'), findTestData('Login/DD_Login').getValue(3, 1))
+		loginPage.enterCredentials(xlsLogin.getValue(2, 1), xlsLogin.getValue(3, 1))
 	}
-	
+
 	@When("El usuario ingresa las credenciales incorrectas")
 	def enterIncorrectCredentials(){
-		WebUI.setText(findTestObject('Login/inputUserName'), findTestData('Login/DD_LogOff').getValue(1, 1))
-		WebUI.setText(findTestObject('Login/inputPassword'), findTestData('Login/DD_LogOff').getValue(2, 1))
+		loginPage.enterCredentials(xlsLogOff.getValue(1, 1), xlsLogOff.getValue(2, 1))
 	}
-	
+
 	@When("El usuario ingresa usuario (.*) y contraseña (.*)")
 	def enterCredentials(String username, String password){
-		WebUI.setText(findTestObject('Login/inputUserName'), username)
-		WebUI.setText(findTestObject('Login/inputPassword'), password)
+		loginPage.enterCredentials(username, password)
 	}
-	
-	
+
 	@And("Da click en el botón de login")
 	def clickOnLoginButton(){
-		WebUI.click(findTestObject('Login/buttonLogin'))
+		loginPage.clickOnLoginButton()
 	}
-	
+
 	@Then("El usuario debería ver la página de inicio")
 	def verifyHomePage(){
-		WebUI.waitForElementPresent(findTestObject('HomePage/ImgLogo'), 5)
-		WebUI.closeBrowser()
+		homePage.verifyHomePage()
 	}
 }
