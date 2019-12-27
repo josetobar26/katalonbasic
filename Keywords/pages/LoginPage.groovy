@@ -26,6 +26,7 @@ public class LoginPage {
 
 	def navigateToLoginPage(){
 		WebUI.openBrowser(GlobalVariable.URL)
+		WebUI.maximizeWindow()
 	}
 
 	def enterUserName(def userName){

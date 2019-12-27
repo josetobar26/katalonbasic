@@ -14,9 +14,11 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import org.openqa.selenium.Keys
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.callTestCase(findTestCase('TC_Login'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Login/TC_Login'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('HomePage/lnkDigitalCertificate'))
+//WebUI.click(findTestObject('HomePage/lnkDigitalCertificate'))
+
+CustomKeywords.'pages.HomePage.cllickOnLnkDigitalCertificate'()
 
 WebUI.click(findTestObject('Digital Certificate/btnCloseAlert'))
 
@@ -35,56 +37,56 @@ if(alert){
 	WebUI.click(findTestObject('Digital Certificate/btnCertificateRequest'))
 }
 
-WebUI.selectOptionByLabel(findTestObject('Digital Certificate/Digital Certificate Request/selectId'), 
+WebUI.selectOptionByLabel(findTestObject('Digital Certificate/Digital Certificate Request/Company Data/selectId'), 
 	findTestData('Digital Certificate/DD_DigitalCertificateRequest').getValue("XLS_Identification", 1), false)
 
-WebUI.clearText(findTestObject('Digital Certificate/Digital Certificate Request/inputName'))
+WebUI.clearText(findTestObject('Digital Certificate/Digital Certificate Request/Company Data/inputName'))
 
-WebUI.setText(findTestObject('Digital Certificate/Digital Certificate Request/inputName'), 
+WebUI.setText(findTestObject('Digital Certificate/Digital Certificate Request/Company Data/inputName'), 
 	findTestData('Digital Certificate/DD_DigitalCertificateRequest').getValue("XLS_Names", 1))
 
-WebUI.clearText(findTestObject('Digital Certificate/Digital Certificate Request/inputLastName'))
+WebUI.clearText(findTestObject('Digital Certificate/Digital Certificate Request/Company Data/inputLastName'))
 
-WebUI.setText(findTestObject('Digital Certificate/Digital Certificate Request/inputLastName'),
+WebUI.setText(findTestObject('Digital Certificate/Digital Certificate Request/Company Data/inputLastName'),
 	findTestData('Digital Certificate/DD_DigitalCertificateRequest').getValue("XLS_LastName", 1))
 
-WebUI.clearText(findTestObject('Digital Certificate/Digital Certificate Request/inputCompanyName'))
-WebUI.setText(findTestObject('Digital Certificate/Digital Certificate Request/inputCompanyName'), 
+WebUI.clearText(findTestObject('Digital Certificate/Digital Certificate Request/Company Data/inputCompanyName'))
+WebUI.setText(findTestObject('Digital Certificate/Digital Certificate Request/Company Data/inputCompanyName'), 
 	findTestData('Digital Certificate/DD_DigitalCertificateRequest').getValue("XLS_CompanyName", 1))
 
-WebUI.click(findTestObject('Digital Certificate/Digital Certificate Request/iconRemoveCity'))
-WebUI.setText(findTestObject('Digital Certificate/Digital Certificate Request/inputCity'), 
+WebUI.click(findTestObject('Digital Certificate/Digital Certificate Request/Company Data/iconRemoveCity'))
+WebUI.setText(findTestObject('Digital Certificate/Digital Certificate Request/Company Data/inputCity'), 
 	findTestData('Digital Certificate/DD_DigitalCertificateRequest').getValue("XLS_City", 1))
 Thread.sleep(3000)
 
-WebUI.sendKeys(findTestObject('Digital Certificate/Digital Certificate Request/inputCity'), Keys.chord(Keys.TAB))
+WebUI.sendKeys(findTestObject('Digital Certificate/Digital Certificate Request/Company Data/inputCity'), Keys.chord(Keys.TAB))
 
-WebUI.clearText(findTestObject('Digital Certificate/Digital Certificate Request/inputaddress'))
-WebUI.setText(findTestObject('Digital Certificate/Digital Certificate Request/inputaddress'), 
+WebUI.clearText(findTestObject('Digital Certificate/Digital Certificate Request/Company Data/inputaddress'))
+WebUI.setText(findTestObject('Digital Certificate/Digital Certificate Request/Company Data/inputaddress'), 
 	findTestData('Digital Certificate/DD_DigitalCertificateRequest').getValue("XLS_Address", 1))
 
-WebUI.clearText(findTestObject('Digital Certificate/Digital Certificate Request/inputMobile'))
-WebUI.setText(findTestObject('Digital Certificate/Digital Certificate Request/inputMobile'), 
+WebUI.clearText(findTestObject('Digital Certificate/Digital Certificate Request/Company Data/inputMobile'))
+WebUI.setText(findTestObject('Digital Certificate/Digital Certificate Request/Company Data/inputMobile'), 
 	findTestData('Digital Certificate/DD_DigitalCertificateRequest').getValue("XLS_Mobile", 1))
 
-WebUI.clearText(findTestObject('Digital Certificate/Digital Certificate Request/inputMail'))
-WebUI.setText(findTestObject('Digital Certificate/Digital Certificate Request/inputMail'), 
+WebUI.clearText(findTestObject('Digital Certificate/Digital Certificate Request/Company Data/inputMail'))
+WebUI.setText(findTestObject('Digital Certificate/Digital Certificate Request/Company Data/inputMail'), 
 	findTestData('Digital Certificate/DD_DigitalCertificateRequest').getValue("XLS_MailCompany", 1))
 
-WebUI.clearText(findTestObject('Digital Certificate/Digital Certificate Request/inputPostalCode'))
-WebUI.setText(findTestObject('Digital Certificate/Digital Certificate Request/inputPostalCode'), 
+WebUI.clearText(findTestObject('Digital Certificate/Digital Certificate Request/Company Data/inputPostalCode'))
+WebUI.setText(findTestObject('Digital Certificate/Digital Certificate Request/Company Data/inputPostalCode'), 
 	findTestData('Digital Certificate/DD_DigitalCertificateRequest').getValue("XLS_PostalCode", 1))
 
-WebUI.waitForElementClickable(findTestObject('Digital Certificate/Digital Certificate Request/btnNext'), 2)
+WebUI.waitForElementClickable(findTestObject('Digital Certificate/Digital Certificate Request/Company Data/btnNext'), 2)
 
-WebUI.click(findTestObject('Digital Certificate/Digital Certificate Request/btnNext'))
-
-Thread.sleep(1000)
-
-WebUI.click(findTestObject('Digital Certificate/Digital Certificate Request/PopUp/btnConfirm'))
+WebUI.click(findTestObject('Digital Certificate/Digital Certificate Request/Company Data/btnNext'))
 
 Thread.sleep(1000)
 
-WebUI.verifyElementPresent(findTestObject('Digital Certificate/Attach Documentation/btnSendDocumentation'), 0)
+WebUI.click(findTestObject('Digital Certificate/Digital Certificate Request/Company Data/PopUp/btnConfirm'))
+
+Thread.sleep(1000)
+
+WebUI.verifyElementPresent(findTestObject('Digital Certificate/Digital Certificate Request/Attach Documentation/btnSendDocumentation'), 0)
 
 CustomKeywords.'utilities.CommonUtilities.endScenario'()
