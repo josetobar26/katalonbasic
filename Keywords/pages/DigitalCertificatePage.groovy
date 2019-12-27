@@ -18,18 +18,34 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 
 import internal.GlobalVariable
 
-public class HomePage {
+public class DigitalCertificatePage {
 
-	private TestObject imgLogo = findTestObject('HomePage/ImgLogo')
-	private TestObject lnkDigitalCertificate = findTestObject('HomePage/lnkDigitalCertificate')
+	private TestObject btnCertificateRequest = findTestObject('Digital Certificate/btnCertificateRequest')
+	private TestObject btnAceptAlert = findTestObject('Digital Certificate/btnAceptAlert')
+	private TestObject btnCloseAlert = findTestObject('Object Repository/Digital Certificate/btnCloseAlert')
+
 
 	@Keyword
-	def verifyHomePage(){
-		WebUI.waitForElementPresent(imgLogo, 5)
+	def clickOnBtnCloseAlert(){
+		WebUI.click(btnCloseAlert)
+		WebUI.waitForPageLoad(2)
 	}
 
 	@Keyword
-	def cllickOnLnkDigitalCertificate(){
-		WebUI.click(lnkDigitalCertificate)
+	def clickOnBtnCertificateRequest(){
+		WebUI.waitForElementClickable(btnCertificateRequest, 5)
+		WebUI.click(btnCertificateRequest)
+		aceptAlert()
+	}
+
+	@Keyword
+	def aceptAlert(){
+		boolean alert =  WebUI.verifyElementPresent(btnAceptAlert, 5, FailureHandling.OPTIONAL)
+		if(alert){
+			WebUI.waitForElementClickable(btnAceptAlert, 5)
+			WebUI.click(btnAceptAlert)
+			Thread.sleep(1000)
+			WebUI.click(btnCertificateRequest)
+		}
 	}
 }

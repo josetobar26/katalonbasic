@@ -23,6 +23,19 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable
 
 public class CommonUtilities {
+	
+	
+	//implementación patron singleton
+	private static CommonUtilities _intance = null;
+	
+	private CommonUtilities(){}
+	
+	public static CommonUtilities Intance(){
+		if(_intance == null){
+			_intance = new CommonUtilities();
+		}
+		return _intance
+	}
 
 	@Keyword
 	def endScenario(){

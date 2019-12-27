@@ -1,3 +1,4 @@
+package homePage
 import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
 import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
@@ -25,8 +26,6 @@ import WebUiBuiltInKeywords as WebUI
 
 import org.openqa.selenium.WebElement
 import pages.HomePage
-import pages.LoginPage
-import utilities.CommonUtilities
 import org.openqa.selenium.WebDriver
 import org.openqa.selenium.By
 
@@ -49,47 +48,12 @@ import cucumber.api.java.en.Then
 import cucumber.api.java.en.When
 
 
-class LoginSteps {
+class HomePageSteps {
 
-	private TestData xlsLogin = findTestData('Login/DD_Login')
-	private TestData xlsLogOff = findTestData('Login/DD_LogOff')
-
-	LoginPage loginPage = new LoginPage()
 	HomePage homePage = new HomePage()
-	//CommonUtilities utilities = new CommonUtilities()
 
-	@Given("El usuario navega a la pagina de login")
-	def navigateToLoginPage(){
-		loginPage.navigateToLoginPage()
-	}
-
-	@When("El usuario ingresa las credenciales correctas")
-	def enterCorrectCredentials(){
-		loginPage.enterCredentials(xlsLogin.getValue(2, 1), xlsLogin.getValue(3, 1))
-	}
-
-	@When("El usuario ingresa las credenciales incorrectas")
-	def enterIncorrectCredentials(){
-		loginPage.enterCredentials(xlsLogOff.getValue(1, 1), xlsLogOff.getValue(2, 1))
-	}
-
-	@When("El usuario ingresa usuario (.*) y contraseña (.*)")
-	def enterCredentials(String username, String password){
-		loginPage.enterCredentials(username, password)
-	}
-
-	@And("Da click en el botón de login")
-	def clickOnLoginButton(){
-		loginPage.clickOnLoginButton()
-	}
-
-	@Then("El usuario debería ver la página de inicio")
-	def verifyHomePage(){
-		homePage.verifyHomePage()
-	}
-	
-	@And("Finalizar Escenario")
-	def endScenario(){
-		CommonUtilities.Intance().endScenario()
+	@And("Ingresar a la interfaz de certificado digital")
+	def clickOnLnkDigitalCertificate(){
+		homePage.cllickOnLnkDigitalCertificate()
 	}
 }
